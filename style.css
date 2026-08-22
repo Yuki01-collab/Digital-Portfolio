@@ -1340,3 +1340,38 @@ footer span {
     left: 145px;
     height: 95px;
 }
+
+/* ==========================================
+   ORGANIC DRIP ART
+========================================== */
+
+.drip-art {
+    position: absolute;
+
+    top: 80px;
+    right: 20%;
+
+    width: 230px;
+    height: 380px;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    opacity: 0.5;
+
+    transform: rotate(-3deg);
+}
+
+
+.drip-art svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+.drip-art path {
+    fill: #8e1717;
+
+    filter: blur(0.3px);
+}

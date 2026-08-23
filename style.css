@@ -315,48 +315,24 @@ nav a:hover {
 
 
 .hero-title {
+
     position: relative;
-    z-index: 5;
-}
 
-
-/* ==========================================
-   LIQUID TYPOGRAPHY DRIPS
-========================================== */
-
-.hero-title::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    top: 48%;
-
-    width: 100%;
-    height: 650px;
-
-    pointer-events: none;
-
-    z-index: -1;
-
-    opacity: 0.95;
-
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 650'%3E%3Cdefs%3E%3Efilter id='glow'%3E%3CfeGaussianBlur stdDeviation='2.5' result='blur'/%3E%3C/filter%3E%3C/defs%3E%3Cg fill='none' stroke='%238e1717' stroke-linecap='round'%3E%3Cpath stroke-width='15' d='M115 0 C110 75 120 135 116 210 C112 290 132 355 125 435 C121 485 126 525 118 650'/%3E%3Cpath stroke-width='7' d='M118 0 C116 80 125 140 120 225 C116 300 137 365 130 440 C126 510 132 565 125 650'/%3E%3Cpath stroke-width='10' d='M365 0 C350 80 375 135 360 220 C348 285 370 330 363 395 C355 465 380 510 365 650'/%3E%3Cpath stroke-width='4' d='M365 0 C360 100 380 150 368 230 C355 310 378 360 370 425 C362 510 378 570 370 650'/%3E%3Cpath stroke-width='13' d='M610 0 C605 65 620 125 612 190 C603 260 625 305 615 370 C604 440 628 490 620 550 C617 585 620 620 618 650'/%3E%3Cpath stroke-width='5' d='M612 0 C610 80 628 130 618 205 C608 280 630 330 620 400 C610 470 635 520 625 590 C623 615 625 635 624 650'/%3E%3Cpath stroke-width='9' d='M825 0 C815 70 830 120 820 190 C810 260 835 315 825 380 C815 450 840 500 830 570 C825 600 830 625 828 650'/%3E%3C/g%3Cg fill='none' stroke='%23c6372f' stroke-linecap='round' opacity='.55' filter='url(%23glow)'%3E%3Cpath stroke-width='4' d='M115 0 C110 75 120 135 116 210 C112 290 132 355 125 435 C121 485 126 525 118 650'/%3E%3Cpath stroke-width='3' d='M365 0 C350 80 375 135 360 220 C348 285 370 330 363 395 C355 465 380 510 365 650'/%3E%3Cpath stroke-width='3' d='M610 0 C605 65 620 125 612 190 C603 260 625 305 615 370 C604 440 628 490 620 550 C617 585 620 620 618 650'/%3E%3Cpath stroke-width='3' d='M825 0 C815 70 830 120 820 190 C810 260 835 315 825 380 C815 450 840 500 830 570 C825 600 830 625 828 650'/%3E%3C/g%3E%3C/svg%3E");
-
-    background-repeat: no-repeat;
-
-    background-size: 100% 100%;
-
-    background-position: center top;
 }
 
 
 .hero-title h1 {
+
     font-family: "Cormorant Garamond", serif;
+
     font-size: clamp(90px, 15vw, 220px);
+
     line-height: 0.72;
+
     font-weight: 500;
+
     letter-spacing: -10px;
+
 }
 
 
@@ -1097,11 +1073,6 @@ footer span {
 
 @media (max-width: 800px) {
 
-   .hero-title::after {
-    top: 42%;
-    height: 430px;
-}
-
 
     .navbar {
 
@@ -1287,91 +1258,4 @@ footer span {
 
     }
 
-}
-
-/* DRIPS */
-
-.drips {
-    position: absolute;
-    top: 0;
-    right: 22%;
-    width: 180px;
-    height: 300px;
-    pointer-events: none;
-}
-
-.drip {
-    position: absolute;
-    top: 0;
-    width: 18px;
-    height: 90px;
-    background: #8e1717;
-    border-radius: 0 0 12px 12px;
-    opacity: 0.55;
-}
-
-.drip::after {
-    content: "";
-    position: absolute;
-    bottom: -12px;
-    left: 0;
-    width: 18px;
-    height: 24px;
-    background: #8e1717;
-    border-radius: 50%;
-}
-
-.drip-1 {
-    left: 20px;
-    height: 120px;
-}
-
-.drip-2 {
-    left: 65px;
-    height: 70px;
-}
-
-.drip-3 {
-    left: 105px;
-    height: 150px;
-}
-
-.drip-4 {
-    left: 145px;
-    height: 95px;
-}
-
-/* ==========================================
-   ORGANIC DRIP ART
-========================================== */
-
-.drip-art {
-    position: absolute;
-
-    top: 80px;
-    right: 20%;
-
-    width: 230px;
-    height: 380px;
-
-    pointer-events: none;
-
-    z-index: 1;
-
-    opacity: 0.5;
-
-    transform: rotate(-3deg);
-}
-
-
-.drip-art svg {
-    width: 100%;
-    height: 100%;
-}
-
-
-.drip-art path {
-    fill: #8e1717;
-
-    filter: blur(0.3px);
 }

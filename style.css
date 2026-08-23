@@ -1272,14 +1272,14 @@ footer span {
 .hero-art img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    object-fit: contain;
     display: block;
 }
 
 
 /* PROFILE PHOTO */
 .profile-placeholder {
+    aspect-ratio: 4 / 5;
     overflow: hidden;
 }
 
@@ -1294,6 +1294,8 @@ footer span {
 
 /* RESEARCH PHOTO */
 .research-placeholder {
+    height: 500px;
+    min-height: 0;
     overflow: hidden;
 }
 
@@ -1301,20 +1303,14 @@ footer span {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
     display: block;
 }
 
 
 /* EDUCATIONAL BACKGROUND LOGOS */
-.school-logo {
-    overflow: hidden;
-}
-
 .school-logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    object-position: center;
     display: block;
 }

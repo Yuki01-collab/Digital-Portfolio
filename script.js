@@ -36,11 +36,19 @@ const researchInfo = document.querySelector(".research-hidden");
 
 if (musicButton && researchInfo) {
 
-    musicButton.addEventListener("click", () => {
+    musicButton.addEventListener("click", function () {
 
         const isOpen = researchInfo.classList.contains("open");
 
-        if (!isOpen) {
+        if (isOpen) {
+
+            researchInfo.classList.remove("open");
+            researchInfo.style.maxHeight = "0px";
+
+            musicButton.classList.remove("active");
+            musicButton.setAttribute("aria-expanded", "false");
+
+        } else {
 
             researchInfo.classList.add("open");
 
@@ -48,27 +56,12 @@ if (musicButton && researchInfo) {
                 researchInfo.scrollHeight + "px";
 
             musicButton.classList.add("active");
-
-            musicButton.setAttribute(
-                "aria-expanded",
-                "true"
-            );
-
-        } else {
-
-            researchInfo.style.maxHeight = "0px";
-
-            researchInfo.classList.remove("open");
-
-            musicButton.classList.remove("active");
-
-            musicButton.setAttribute(
-                "aria-expanded",
-                "false"
-            );
+            musicButton.setAttribute("aria-expanded", "true");
 
         }
 
     });
+
+}
 
 }

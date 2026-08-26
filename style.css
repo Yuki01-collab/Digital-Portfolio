@@ -1329,8 +1329,12 @@ footer span {
 /* RESEARCH PHOTO */
 .research-placeholder {
     position: relative;
-    height: 500px;
+
+    aspect-ratio: 4 / 3;
+
+    height: auto;
     min-height: 0;
+
     overflow: hidden;
 
     border: 1px solid var(--border);
@@ -1355,7 +1359,7 @@ footer span {
         contrast(1.15)
         brightness(0.65);
 
-    transform: scale(1.02);
+    transform: none;
 }
 
 

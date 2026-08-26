@@ -1803,6 +1803,36 @@ footer span {
 
 
 /* ==========================================
+   SOUND VIBRATION + WAVE
+========================================== */
+
+.research-hidden-inner h3::before {
+    content: ")))";
+
+    position: absolute;
+
+    left: -55px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--bright-red);
+
+    font-family: "Space Mono", monospace;
+
+    font-size: 18px;
+
+    letter-spacing: -7px;
+
+    opacity: 0.4;
+
+    pointer-events: none;
+
+    animation: soundWavePulse 1.6s ease-in-out infinite;
+}
+
+
+/* ==========================================
    SUBTLE SOUND VIBRATION
 ========================================== */
 
@@ -1850,6 +1880,33 @@ footer span {
             -1px 0 rgba(80, 120, 255, 0.15);
     }
 
+}
+
+
+/* ==========================================
+   SOUND WAVE PULSE
+========================================== */
+
+@keyframes soundWavePulse {
+
+    0%,
+    100% {
+        opacity: 0.2;
+
+        transform:
+            translateY(-50%)
+            scale(0.85);
+    }
+
+    50% {
+        opacity: 0.65;
+
+        transform:
+            translateY(-50%)
+            scale(1.08);
+    }
+
+}
 }
 /* DESCRIPTION */
 

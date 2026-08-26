@@ -2019,3 +2019,47 @@ footer span {
     .research-hidden-inner {
         padding-top: 40px;
     }
+
+}
+
+/* ==========================================
+   HERO VINYL — BEHIND HERO ART
+========================================== */
+
+.hero-vinyl {
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    top: 280px;
+    right: 8%;
+
+    transform: rotate(7deg);
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    transition:
+        transform 0.55s ease,
+        right 0.55s ease;
+}
+
+
+.hero-vinyl img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* VISUAL PLACEHOLDER ABOVE VINYL */
+
+.hero-art {
+    position: absolute;
+    z-index: 2;
+}

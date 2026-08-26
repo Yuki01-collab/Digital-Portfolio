@@ -61,19 +61,3 @@ if (musicButton && researchInfo) {
     });
 
 }
-
-/* ==========================================
-   HERO VINYL INTERACTION
-========================================== */
-
-const heroArt = document.querySelector(".hero-art");
-
-if (heroArt) {
-
-    heroArt.addEventListener("click", function () {
-
-        heroArt.classList.toggle("vinyl-active");
-
-    });
-
-}

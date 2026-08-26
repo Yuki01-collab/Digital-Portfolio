@@ -318,6 +318,16 @@ nav a:hover {
 
     position: relative;
 
+    width: fit-content;
+
+    padding: 28px 35px 38px;
+
+    border: 1px solid rgba(238, 232, 227, 0.14);
+
+    background: rgba(8, 6, 6, 0.12);
+
+}
+
 }
 
 

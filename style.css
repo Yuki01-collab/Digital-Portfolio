@@ -1584,7 +1584,7 @@ footer span {
     border: none;
     background: transparent;
 
-    color: #5f5956;
+    color: #9a918c;
 
     font-family: "Cormorant Garamond", serif;
     font-size: 38px;
@@ -1592,20 +1592,54 @@ footer span {
 
     cursor: pointer;
 
-    opacity: 0.5;
+    opacity: 0.78;
+
+    transform: rotate(-12deg);
 
     transition:
         color 0.3s ease,
         opacity 0.3s ease,
-        text-shadow 0.3s ease,
-        transform 0.3s ease;
+        text-shadow 0.3s ease;
 }
 
 
-/* HOVER */
+/* HOVER — ONE SECOND SWAY */
 
 .music-button:hover {
-    opacity: 0.8;
+    opacity: 1;
+
+    animation: musicSway 1s ease-in-out;
+}
+
+
+/* SWAY */
+
+@keyframes musicSway {
+
+    0% {
+        transform: rotate(-12deg);
+    }
+
+    20% {
+        transform: rotate(-18deg);
+    }
+
+    40% {
+        transform: rotate(-6deg);
+    }
+
+    60% {
+        transform: rotate(-16deg);
+    }
+
+    80% {
+        transform: rotate(-8deg);
+    }
+
+    100% {
+        transform: rotate(-12deg);
+    }
+
 }
 
 
@@ -1620,8 +1654,10 @@ footer span {
         0 0 8px rgba(198, 55, 47, 0.55),
         0 0 18px rgba(142, 23, 23, 0.35);
 
-    transform: scale(1.05);
+    transform: rotate(-12deg) scale(1.05);
 }
+
+
 
 
 /* ==========================================

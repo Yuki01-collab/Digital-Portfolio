@@ -1334,11 +1334,11 @@ footer span {
     position: relative;
     overflow: hidden;
 
+    width: 100%;
+    max-width: 750px;
+    height: 300px;
 
-    height: auto;
-    min-height: 0;
-
-    overflow: hidden;
+    margin: 0 auto;
 
     border: 1px solid var(--border);
 
@@ -1353,7 +1353,7 @@ footer span {
     height: 100%;
 
     object-fit: cover;
-    object-position: center 45%;
+    object-position: center;
 
     display: block;
 
@@ -1361,8 +1361,6 @@ footer span {
         grayscale(35%)
         contrast(1.15)
         brightness(0.65);
-
-    transform: scale(1.45);
 }
 
 /* DARK / RED OVERLAY */

@@ -1878,6 +1878,56 @@ footer span {
             -1px 0 rgba(80, 120, 255, 0.15);
     }
 
+   /* ==========================================
+   JOJI / VHS GLITCH
+========================================== */
+
+@keyframes researchGlitch {
+
+    0%,
+    90%,
+    100% {
+        clip-path: inset(0 0 0 0);
+
+        text-shadow:
+            1px 0 rgba(198, 55, 47, 0.25),
+            -1px 0 rgba(80, 120, 255, 0.15);
+    }
+
+    91% {
+        clip-path: inset(20% 0 65% 0);
+
+        text-shadow:
+            4px 0 rgba(198, 55, 47, 0.65),
+            -4px 0 rgba(80, 120, 255, 0.45);
+    }
+
+    92% {
+        clip-path: inset(65% 0 20% 0);
+
+        text-shadow:
+            -3px 0 rgba(198, 55, 47, 0.55),
+            3px 0 rgba(80, 120, 255, 0.35);
+    }
+
+    93% {
+        clip-path: inset(40% 0 40% 0);
+
+        text-shadow:
+            2px 0 rgba(198, 55, 47, 0.5),
+            -2px 0 rgba(80, 120, 255, 0.3);
+    }
+
+    94% {
+        clip-path: inset(0 0 0 0);
+
+        text-shadow:
+            1px 0 rgba(198, 55, 47, 0.25),
+            -1px 0 rgba(80, 120, 255, 0.15);
+    }
+
+}
+
 }
 
 

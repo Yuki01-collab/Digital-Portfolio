@@ -1896,3 +1896,70 @@ footer span {
     }
 
 }
+
+/* ==========================================
+   HERO VINYL — HIDDEN / PEEK ON PRESS
+========================================== */
+
+.hero-art {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* VINYL */
+
+.hero-vinyl {
+    position: absolute;
+
+    width: 290px;
+    height: 290px;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(-8deg);
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+
+/* VINYL IMAGE */
+
+.hero-vinyl img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* KEEP VISUAL PLACEHOLDER ABOVE VINYL */
+
+.hero-art > p {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* ==========================================
+   PRESSED STATE
+========================================== */
+
+.hero-art.vinyl-active .hero-vinyl {
+
+    transform:
+        translate(25%, -50%)
+        rotate(8deg);
+}

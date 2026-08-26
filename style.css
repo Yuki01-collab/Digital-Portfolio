@@ -1561,25 +1561,39 @@ footer span {
 
 
 /* ==========================================
-   MUSIC NOTE
+   RESEARCH MUSIC NOTE
 ========================================== */
 
+.research-background {
+    margin-top: 30px;
+}
+
+.research-background .small-label {
+    margin-bottom: 18px;
+}
+
+
+/* MUSIC BUTTON */
+
 .music-button {
+    display: block;
+
+    margin: 0 auto;
+
+    padding: 0;
+
     border: none;
     background: transparent;
 
     color: #5f5956;
 
     font-family: "Cormorant Garamond", serif;
-    font-size: 32px;
-
+    font-size: 38px;
     line-height: 1;
-
-    padding: 5px;
 
     cursor: pointer;
 
-    opacity: 0.55;
+    opacity: 0.5;
 
     transition:
         color 0.3s ease,
@@ -1596,7 +1610,7 @@ footer span {
 }
 
 
-/* PRESSED */
+/* ACTIVE */
 
 .music-button.active {
     color: var(--bright-red);
@@ -1604,8 +1618,209 @@ footer span {
     opacity: 1;
 
     text-shadow:
-        0 0 8px rgba(198, 55, 47, 0.5),
-        0 0 20px rgba(142, 23, 23, 0.35);
+        0 0 8px rgba(198, 55, 47, 0.55),
+        0 0 18px rgba(142, 23, 23, 0.35);
 
     transform: scale(1.05);
+}
+
+
+/* ==========================================
+   HIDDEN RESEARCH INFORMATION
+========================================== */
+
+.research-hidden {
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+        max-height 0.7s ease,
+        opacity 0.4s ease;
+}
+
+.research-hidden.open {
+    opacity: 1;
+}
+
+
+/* JOJI VHS RESEARCH CARD */
+
+.research-hidden-inner {
+    position: relative;
+
+    max-width: 1050px;
+
+    margin-top: 45px;
+
+    padding: 45px 50px 50px;
+
+    border: 1px solid rgba(238, 232, 227, 0.14);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(50, 16, 16, 0.32),
+            rgba(8, 6, 6, 0.72)
+        );
+
+    box-shadow:
+        0 0 60px rgba(142, 23, 23, 0.08);
+
+    overflow: hidden;
+}
+
+
+/* INNER VHS FRAME */
+
+.research-hidden-inner::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 10px;
+
+    border: 1px solid rgba(238, 232, 227, 0.055);
+
+    pointer-events: none;
+}
+
+
+/* VHS SCANLINES */
+
+.research-hidden-inner::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.025) 0px,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px,
+            transparent 5px
+        );
+
+    pointer-events: none;
+}
+
+
+/* CONTENT ABOVE EFFECTS */
+
+.research-hidden-inner > * {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* LABEL */
+
+.research-label {
+    display: block;
+
+    color: var(--bright-red);
+
+    font-family: "Space Mono", monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    line-height: 1.4;
+
+    margin-bottom: 20px;
+}
+
+
+/* TITLE */
+
+.research-hidden-inner h3 {
+    max-width: 950px;
+
+    color: var(--cream);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(38px, 5vw, 68px);
+
+    font-weight: 500;
+
+    line-height: 0.92;
+
+    letter-spacing: -1.5px;
+
+    margin: 0 0 30px;
+}
+
+
+/* DESCRIPTION */
+
+.research-hidden-inner p {
+    max-width: 720px;
+
+    color: #8c8580;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin: 0 0 35px;
+}
+
+
+/* CREDIT */
+
+.research-credit {
+    margin-bottom: 0;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .research-hidden-inner {
+        margin-top: 35px;
+
+        padding: 35px 25px 40px;
+    }
+
+    .research-hidden-inner h3 {
+        font-size: 40px;
+
+        line-height: 0.94;
+    }
+
+    .research-hidden-inner p {
+        font-size: 12px;
+
+        line-height: 1.7;
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .research-background {
+        margin-top: 25px;
+    }
+
+    .music-button {
+        font-size: 34px;
+    }
+
+    .research-hidden-inner {
+        padding-top: 40px;
+    }
+
 }

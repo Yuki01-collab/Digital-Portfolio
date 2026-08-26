@@ -1608,7 +1608,7 @@ footer span {
     height: 22px;
 
     left: 15px;
-    top: 14px;
+    top: 11px;
 
     display: flex;
     align-items: center;
@@ -1632,8 +1632,8 @@ footer span {
     width: 22px;
     height: 22px;
 
-    left: 25px;
-    top: 22px;
+    left: 29px;
+    top: 25px;
 
     display: flex;
     align-items: center;
@@ -1685,10 +1685,7 @@ footer span {
 ========================================== */
 
 .research-trigger-button:hover .paper-icon {
-    transform:
-        rotate(-6deg)
-        translateX(2px)
-        translateY(1px);
+    transform: rotate(-6deg) translateX(7px) translateY(1px);
 }
 
 

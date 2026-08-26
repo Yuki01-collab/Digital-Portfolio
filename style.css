@@ -1975,7 +1975,7 @@ footer span {
 }
 
 /* ==========================================
-   HERO VINYL — SEPARATE FROM HERO ART
+   HERO VINYL — BEHIND HERO ART
 ========================================== */
 
 .hero-vinyl {
@@ -1984,12 +1984,10 @@ footer span {
     width: 300px;
     height: 300px;
 
-    top: 50%;
-    left: 50%;
+    top: 280px;
+    right: 8%;
 
-    transform:
-        translate(-35%, -50%)
-        rotate(7deg);
+    transform: rotate(7deg);
 
     z-index: 1;
 
@@ -1997,7 +1995,7 @@ footer span {
 
     transition:
         transform 0.55s ease,
-        opacity 0.55s ease;
+        right 0.55s ease;
 }
 
 
@@ -2011,9 +2009,9 @@ footer span {
 }
 
 
-/* HERO ART STAYS ABOVE */
+/* VISUAL PLACEHOLDER ABOVE VINYL */
 
 .hero-art {
-    position: relative;
+    position: absolute;
     z-index: 2;
 }

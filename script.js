@@ -23,54 +23,46 @@ taskButtons.forEach(button => {
 
         }
 
-        /* ==========================================
+     /* ==========================================
    RESEARCH INFORMATION TOGGLE
 ========================================== */
 
-const researchTrigger =
-    document.querySelector(".research-trigger-button");
+const researchButton = document.querySelector(".research-trigger-button");
+const researchInfo = document.querySelector(".research-hidden");
 
-const researchHidden =
-    document.querySelector(".research-hidden");
+if (researchButton && researchInfo) {
 
+    researchButton.onclick = function () {
 
-if (researchTrigger && researchHidden) {
+        if (researchInfo.style.maxHeight === "0px" || !researchInfo.style.maxHeight) {
 
-    researchTrigger.addEventListener("click", () => {
+            researchInfo.classList.add("open");
 
-        const isOpen =
-            researchHidden.classList.contains("open");
+            researchInfo.style.maxHeight =
+                researchInfo.scrollHeight + "px";
 
+            researchButton.classList.add("active");
 
-        if (!isOpen) {
-
-            researchHidden.classList.add("open");
-
-            researchTrigger.classList.add("active");
-
-            researchTrigger.setAttribute(
+            researchButton.setAttribute(
                 "aria-expanded",
                 "true"
             );
 
-            researchHidden.style.maxHeight =
-                researchHidden.scrollHeight + "px";
-
         } else {
 
-            researchHidden.classList.remove("open");
+            researchInfo.style.maxHeight = "0px";
 
-            researchTrigger.classList.remove("active");
+            researchInfo.classList.remove("open");
 
-            researchTrigger.setAttribute(
+            researchButton.classList.remove("active");
+
+            researchButton.setAttribute(
                 "aria-expanded",
                 "false"
             );
 
-            researchHidden.style.maxHeight = "0";
-
         }
 
-    });
+    };
 
-} 
+}

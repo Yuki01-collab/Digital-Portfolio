@@ -41,6 +41,7 @@ if (researchTrigger && researchHidden) {
         const isOpen =
             researchHidden.classList.contains("open");
 
+
         if (!isOpen) {
 
             researchHidden.classList.add("open");
@@ -66,14 +67,10 @@ if (researchTrigger && researchHidden) {
                 "false"
             );
 
-            researchHidden.style.maxHeight = null;
+            researchHidden.style.maxHeight = "0";
 
         }
 
     });
 
-}
-
-    });
-
-});
+} 

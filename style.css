@@ -1975,41 +1975,31 @@ footer span {
 }
 
 /* ==========================================
-   HERO VINYL — HIDDEN / PEEK ON PRESS
+   HERO VINYL — SEPARATE FROM HERO ART
 ========================================== */
-
-.hero-art {
-    position: relative;
-    z-index: 2;
-}
-
-
-/* VINYL */
 
 .hero-vinyl {
     position: absolute;
 
-    width: 290px;
-    height: 290px;
+    width: 300px;
+    height: 300px;
 
     top: 50%;
     left: 50%;
 
     transform:
-        translate(-50%, -50%)
-        rotate(-8deg);
+        translate(-35%, -50%)
+        rotate(7deg);
 
-    z-index: 0;
+    z-index: 1;
 
     pointer-events: none;
 
     transition:
-        transform 0.5s ease,
-        opacity 0.5s ease;
+        transform 0.55s ease,
+        opacity 0.55s ease;
 }
 
-
-/* VINYL IMAGE */
 
 .hero-vinyl img {
     width: 100%;
@@ -2021,22 +2011,9 @@ footer span {
 }
 
 
-/* KEEP VISUAL PLACEHOLDER ABOVE VINYL */
+/* HERO ART STAYS ABOVE */
 
-.hero-art > p {
+.hero-art {
     position: relative;
-
     z-index: 2;
-}
-
-
-/* ==========================================
-   PRESSED STATE
-========================================== */
-
-.hero-art.vinyl-active .hero-vinyl {
-
-    transform:
-        translate(25%, -50%)
-        rotate(8deg);
 }

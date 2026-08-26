@@ -28,25 +28,46 @@ taskButtons.forEach(button => {
 });
 
 /* ==========================================
-   MUSIC NOTE TOGGLE
+   RESEARCH INFORMATION TOGGLE
 ========================================== */
 
 const musicButton = document.querySelector(".music-button");
+const researchInfo = document.querySelector(".research-hidden");
 
-if (musicButton) {
+if (musicButton && researchInfo) {
 
     musicButton.addEventListener("click", () => {
 
-        const active = musicButton.classList.toggle("active");
+        const isOpen = researchInfo.classList.contains("open");
 
-        musicButton.setAttribute(
-            "aria-pressed",
-            active ? "true" : "false"
-        );
+        if (!isOpen) {
 
-    });
+            researchInfo.classList.add("open");
 
-}
+            researchInfo.style.maxHeight =
+                researchInfo.scrollHeight + "px";
+
+            musicButton.classList.add("active");
+
+            musicButton.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+        } else {
+
+            researchInfo.style.maxHeight = "0px";
+
+            researchInfo.classList.remove("open");
+
+            musicButton.classList.remove("active");
+
+            musicButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        }
 
     });
 

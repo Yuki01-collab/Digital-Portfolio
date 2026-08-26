@@ -38,9 +38,7 @@ if (musicButton && researchInfo) {
 
     musicButton.addEventListener("click", function () {
 
-        const isOpen = researchInfo.classList.contains("open");
-
-        if (isOpen) {
+        if (researchInfo.classList.contains("open")) {
 
             researchInfo.classList.remove("open");
             researchInfo.style.maxHeight = "0px";
@@ -61,7 +59,5 @@ if (musicButton && researchInfo) {
         }
 
     });
-
-}
 
 }

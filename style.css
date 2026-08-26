@@ -1776,21 +1776,58 @@ footer span {
 /* TITLE */
 
 .research-hidden-inner h3 {
-    max-width: 950px;
+    position: relative;
+
+    max-width: 850px;
 
     color: var(--cream);
 
     font-family: "Cormorant Garamond", serif;
 
-    font-size: clamp(38px, 5vw, 68px);
+    font-size: clamp(32px, 4vw, 54px);
 
     font-weight: 500;
 
-    line-height: 0.92;
+    line-height: 1;
 
-    letter-spacing: -1.5px;
+    letter-spacing: -0.8px;
 
-    margin: 0 0 30px;
+    margin: 0 0 28px;
+
+    text-shadow:
+        1px 0 rgba(198, 55, 47, 0.35),
+        -1px 0 rgba(80, 120, 255, 0.2);
+
+    animation: soundVibration 3s ease-in-out infinite;
+}
+
+
+/* SUBTLE SOUND VIBRATION */
+
+@keyframes soundVibration {
+
+    0%,
+    92%,
+    100% {
+        transform: translateX(0);
+    }
+
+    93% {
+        transform: translateX(-1px);
+    }
+
+    94% {
+        transform: translateX(1px);
+    }
+
+    95% {
+        transform: translateX(-1px);
+    }
+
+    96% {
+        transform: translateX(0);
+    }
+
 }
 
 

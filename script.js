@@ -23,18 +23,43 @@ taskButtons.forEach(button => {
 
         }
 
-     /* ==========================================
+         });
+
+});
+
+/* ==========================================
    RESEARCH INFORMATION TOGGLE
 ========================================== */
 
-const researchButton = document.querySelector(".research-trigger-button");
-const researchInfo = document.querySelector(".research-hidden");
+const researchButton =
+    document.querySelector(".research-trigger-button");
+
+const researchInfo =
+    document.querySelector(".research-hidden");
+
 
 if (researchButton && researchInfo) {
 
-    researchButton.onclick = function () {
+    researchButton.addEventListener("click", function () {
 
-        if (researchInfo.style.maxHeight === "0px" || !researchInfo.style.maxHeight) {
+        const isOpen =
+            researchButton.getAttribute("aria-expanded") === "true";
+
+
+        if (isOpen) {
+
+            researchInfo.style.maxHeight = "0px";
+
+            researchInfo.classList.remove("open");
+
+            researchButton.classList.remove("active");
+
+            researchButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        } else {
 
             researchInfo.classList.add("open");
 
@@ -48,21 +73,8 @@ if (researchButton && researchInfo) {
                 "true"
             );
 
-        } else {
-
-            researchInfo.style.maxHeight = "0px";
-
-            researchInfo.classList.remove("open");
-
-            researchButton.classList.remove("active");
-
-            researchButton.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
         }
 
-    };
+    });
 
 }

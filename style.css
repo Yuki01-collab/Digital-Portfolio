@@ -350,10 +350,10 @@ nav a:hover {
     position: absolute;
     z-index: 2;
 
-    width: 260px;
-    height: 260px;
+    width: 360px;
+    height: 360px;
 
-    left: 750px;
+    left: 850px;
     top: 210px;
 
     display: flex;

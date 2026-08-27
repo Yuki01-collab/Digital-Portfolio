@@ -417,6 +417,52 @@ nav a:hover {
 
 }
 
+.hero-role {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+
+    font-family: "Space Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.hero-role span {
+    color: #eee8e3;
+}
+
+.hero-role strong {
+    position: relative;
+    color: var(--bright-red);
+    font-weight: 700;
+
+    text-shadow:
+        0 0 5px rgba(198, 55, 47, 0.8),
+        0 0 14px rgba(142, 23, 23, 0.6);
+}
+
+/* STATIC GLITCH */
+.hero-role strong::before,
+.hero-role strong::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.hero-role strong::before {
+    color: rgba(198, 55, 47, 0.8);
+    transform: translateX(-2px);
+    clip-path: inset(25% 0 55% 0);
+}
+
+.hero-role strong::after {
+    color: rgba(255, 70, 60, 0.6);
+    transform: translateX(2px);
+    clip-path: inset(65% 0 15% 0);
+}
+
 
 .hero-name h2 {
 

@@ -1991,9 +1991,9 @@ footer span {
     }
 
     .research-hidden-inner h3 {
-        font-size: 40px;
+        font-size: 30px;
 
-        line-height: 0.94;
+        line-height: 1;
     }
 
     .research-hidden-inner p {

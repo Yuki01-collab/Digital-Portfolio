@@ -1063,7 +1063,7 @@ footer span {
 
 
     .hero {
-
+        min-height: 100svh;
         padding: 120px 7% 80px;
 
     }

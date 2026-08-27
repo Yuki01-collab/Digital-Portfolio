@@ -417,50 +417,160 @@ nav a:hover {
 
 }
 
+/* ==========================================
+   HERO ROLE — SKIPPER GLITCH
+========================================== */
+
 .hero-role {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     margin-top: 14px;
 
     font-family: "Space Mono", monospace;
-    font-size: 10px;
-    letter-spacing: 2px;
+    font-size: 14px;
+    letter-spacing: 3px;
 }
 
 .hero-role span {
     color: #eee8e3;
+    font-weight: 400;
 }
 
 .hero-role strong {
     position: relative;
+    display: inline-block;
+
     color: var(--bright-red);
     font-weight: 700;
 
     text-shadow:
-        0 0 5px rgba(198, 55, 47, 0.8),
-        0 0 14px rgba(142, 23, 23, 0.6);
+        0 0 5px rgba(198, 55, 47, 0.9),
+        0 0 12px rgba(198, 55, 47, 0.7),
+        0 0 25px rgba(142, 23, 23, 0.5);
+
+    animation: skipperFlicker 2.5s infinite;
 }
 
-/* STATIC GLITCH */
+/* GLITCH COPIES */
+
 .hero-role strong::before,
 .hero-role strong::after {
     content: attr(data-text);
+
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    color: var(--bright-red);
     pointer-events: none;
 }
 
+/* RED OFFSET */
+
 .hero-role strong::before {
-    color: rgba(198, 55, 47, 0.8);
-    transform: translateX(-2px);
-    clip-path: inset(25% 0 55% 0);
+    text-shadow: -2px 0 rgba(255, 70, 60, 0.9);
+
+    clip-path: inset(10% 0 75% 0);
+
+    animation: skipperGlitchTop 2.5s infinite steps(1);
 }
 
+/* SECOND GLITCH SLICE */
+
 .hero-role strong::after {
-    color: rgba(255, 70, 60, 0.6);
-    transform: translateX(2px);
+    text-shadow: 2px 0 rgba(255, 40, 40, 0.8);
+
     clip-path: inset(65% 0 15% 0);
+
+    animation: skipperGlitchBottom 2.5s infinite steps(1);
+}
+
+
+/* ==========================================
+   STATIC FLICKER
+========================================== */
+
+@keyframes skipperFlicker {
+
+    0%, 72%, 100% {
+        opacity: 1;
+    }
+
+    73% {
+        opacity: 0.85;
+    }
+
+    74% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.7;
+    }
+
+    76% {
+        opacity: 1;
+    }
+}
+
+
+/* ==========================================
+   TOP GLITCH
+========================================== */
+
+@keyframes skipperGlitchTop {
+
+    0%, 82%, 100% {
+        transform: translateX(0);
+        clip-path: inset(10% 0 75% 0);
+    }
+
+    83% {
+        transform: translateX(-4px);
+        clip-path: inset(15% 0 65% 0);
+    }
+
+    84% {
+        transform: translateX(3px);
+        clip-path: inset(5% 0 80% 0);
+    }
+
+    85% {
+        transform: translateX(-2px);
+        clip-path: inset(20% 0 60% 0);
+    }
+}
+
+
+/* ==========================================
+   BOTTOM GLITCH
+========================================== */
+
+@keyframes skipperGlitchBottom {
+
+    0%, 87%, 100% {
+        transform: translateX(0);
+        clip-path: inset(65% 0 15% 0);
+    }
+
+    88% {
+        transform: translateX(4px);
+        clip-path: inset(60% 0 20% 0);
+    }
+
+    89% {
+        transform: translateX(-3px);
+        clip-path: inset(70% 0 10% 0);
+    }
+
+    90% {
+        transform: translateX(2px);
+        clip-path: inset(55% 0 25% 0);
+    }
 }
 
 

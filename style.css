@@ -347,7 +347,7 @@ nav a:hover {
 }
 
 .hero-art {
-    position: relative;
+    position: absolute;
     z-index: 2;
 
     width: 360px; 

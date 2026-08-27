@@ -344,29 +344,23 @@ nav a:hover {
 
 }
 
-
 .hero-art {
-
     position: absolute;
 
-    z-index: 1;
+    z-index: 2;
 
-    width: 280px;
-
+    width: 360px;
     height: 360px;
 
     right: 12%;
-
     top: 100px;
 
     display: flex;
 
     justify-content: center;
-
     align-items: center;
 
     background:
-
         linear-gradient(
             145deg,
             #321010,
@@ -378,10 +372,10 @@ nav a:hover {
     transform: rotate(4deg);
 
     box-shadow:
-
         0 0 100px rgba(142, 23, 23, 0.2);
 
-}
+    overflow: hidden;
+    }
 
 
 .hero-art::before {
@@ -1782,7 +1776,7 @@ footer span {
 
     font-family: "Cormorant Garamond", serif;
 
-    font-size: clamp(38px, 5vw, 68px);
+    font-size: clamp(22px, 2.2vw, 32px);
 
     font-weight: 500;
 
@@ -1829,9 +1823,9 @@ footer span {
     }
 
     .research-hidden-inner h3 {
-        font-size: 40px;
+        font-size: 30px;
 
-        line-height: 0.94;
+        line-height: 1;
     }
 
     .research-hidden-inner p {

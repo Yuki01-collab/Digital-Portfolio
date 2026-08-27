@@ -338,10 +338,12 @@ nav a:hover {
 }
 
 
-.hero-title h1 span {
+.glitch-word {
+    color: #eee8e3;
+}
 
+.glitch-word.red {
     color: var(--red);
-
 }
 
 .hero-art {

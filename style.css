@@ -347,18 +347,17 @@ nav a:hover {
 }
 
 .hero-art {
-    position: absolute;
+    osition: absolute;
 
     z-index: 2;
 
     width: 360px;
     height: 360px;
 
-    right: 12%;
-    top: 100px;
+    right: 0;
+    top: 180px;
 
     display: flex;
-
     justify-content: center;
     align-items: center;
 
@@ -377,8 +376,7 @@ nav a:hover {
         0 0 100px rgba(142, 23, 23, 0.2);
 
     overflow: hidden;
-    }
-
+}
 
 .hero-art::before {
     content: "";

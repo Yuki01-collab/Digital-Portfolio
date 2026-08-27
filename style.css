@@ -347,14 +347,14 @@ nav a:hover {
 }
 
 .hero-art {
-    position: relative;
+    position: absolute;
     z-index: 2;
 
     width: 360px; 
     height: 360px; 
    
     left: 70%; 
-    top: -350px;
+    top: 190px;
    
     display: flex;
     justify-content: center;

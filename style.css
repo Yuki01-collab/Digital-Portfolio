@@ -2220,23 +2220,22 @@ footer span {
 
 .group-dropdown {
     display: block;
-    margin-top: 65px !important;
-    margin-bottom: 20px;
+    margin-top: 0;           
+    margin-bottom: 10px;
 }
-
-/* TRIGGER */
 
 .group-trigger {
     width: 100%;
     display: flex;
     align-items: center;
     gap: 14px;
-    padding: 15px;
+    padding: 12px 0;         
     background: transparent;
     border: none;
     cursor: pointer;
     text-align: left;
 }
+
 
 /* GLITCH ICON */
 
@@ -2358,28 +2357,19 @@ footer span {
 }
 
 /* DROPDOWN CONTENT */
-
 .group-content {
-    padding: 18px 15px;
-    border-top: 1px solid rgba(164, 23, 32, 0.2);
-
-    animation: group-reveal 0.3s ease;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
 }
 
 .group-content[hidden] {
-    display: none;
+    display: block;          /* lets the open/close animation run */
 }
 
-@keyframes group-reveal {
-    from {
-        opacity: 0;
-        transform: translateY(-5px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.group-dropdown.active .group-content {
+    opacity: 1;
 }
 
 /* GROUP NAME */
@@ -2393,11 +2383,11 @@ footer span {
 }
 
 /* MEMBERS */
-
 .member-list {
     display: flex;
     flex-direction: column;
     gap: 7px;
+    padding: 0 15px 18px;
 }
 
 .member-item {

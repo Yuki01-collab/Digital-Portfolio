@@ -2212,15 +2212,16 @@ footer span {
         transform: translateX(0);
     }
 
+}
+
    /* =================================
    GROUP INFORMATION DROPDOWN
 ================================= */
 
 .group-dropdown {
-    margin-top: 30px;
-    width: 100%;
-    border: 1px solid rgba(164, 23, 32, 0.35);
-    background: rgba(142, 23, 29, 0.035);
+    display: block;
+    margin-top: 65px !important;
+    margin-bottom: 20px;
 }
 
 /* TRIGGER */

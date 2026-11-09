@@ -66,16 +66,20 @@ document.querySelectorAll(".group-dropdown").forEach(dropdown => {
     trigger.addEventListener("click", () => {
 
         const isOpen = trigger.getAttribute("aria-expanded") === "true";
+        const taskContent = dropdown.closest(".task-content");
+        const h = content.scrollHeight;
+
+        // work out the parent's new height BEFORE changing anything
+        if (taskContent) {
+            const newHeight = isOpen
+                ? taskContent.scrollHeight - h
+                : taskContent.scrollHeight + h;
+            taskContent.style.maxHeight = newHeight + "px";
+        }
 
         trigger.setAttribute("aria-expanded", String(!isOpen));
         dropdown.classList.toggle("active", !isOpen);
-        content.hidden = isOpen;
-
-        // resize the parent task panel so it doesn't clip the group list
-        const taskContent = dropdown.closest(".task-content");
-        if (taskContent) {
-            taskContent.style.maxHeight = taskContent.scrollHeight + "px";
-        }
+        content.style.maxHeight = isOpen ? "0px" : h + "px";
     });
 
 });

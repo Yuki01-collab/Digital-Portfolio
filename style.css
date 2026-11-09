@@ -2375,11 +2375,14 @@ footer span {
 /* GROUP NAME */
 
 .group-name {
+    padding: 18px 15px 0;
+    margin-bottom: 18px;
+    border-top: 1px solid rgba(164, 23, 32, 0.45);
+
     font-family: 'Manrope', sans-serif;
     font-size: 14px;
     font-weight: 700;
     color: #eee8e3;
-    margin-bottom: 18px;
 }
 
 /* MEMBERS */

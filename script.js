@@ -58,6 +58,28 @@ if (musicButton && researchInfo) {
 
         }
 
+/* =================================
+   GROUP INFORMATION TOGGLE
+================================= */
+
+document.querySelectorAll('.group-dropdown').forEach(dropdown => {
+
+    const trigger = dropdown.querySelector('.group-trigger');
+    const content = dropdown.querySelector('.group-content');
+
+    trigger.addEventListener('click', () => {
+
+        const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+
+        // Toggle dropdown
+        trigger.setAttribute('aria-expanded', !isOpen);
+
+        dropdown.classList.toggle('active', !isOpen);
+
+        content.hidden = isOpen;
+
     });
+
+});
 
 }
